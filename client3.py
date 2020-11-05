@@ -15,9 +15,12 @@ msg = client.recv(1024).decode()
 
 print(msg)
 
+name = input("Enter your Username: ")
+client.send(name.encode(FORMAT))
+
 def input_msg():
     while True:
-        i = input()
+        i = input(f"{name}: ")
         client.send(i.encode(FORMAT))
 
 thread = threading.Thread(target=input_msg)
