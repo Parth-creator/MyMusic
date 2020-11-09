@@ -8,7 +8,7 @@ FORMAT = 'utf-8'
 SERVER = "192.168.1.10"
 ADDR = (SERVER, PORT)
 
-PATH = "E:\\Chat\\lib\\info"
+PATH = "C:\\Chat\\lib\\info"
 
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 client.connect(ADDR)
@@ -38,7 +38,7 @@ else:
         pass
     
     elif sign_in_up == 'U':
-        os.chdir('E:\\')
+        os.chdir('C:\\')
         os.makedirs('Chat\\lib\\info')
         os.chdir(PATH)
         
